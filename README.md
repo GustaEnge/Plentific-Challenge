@@ -130,16 +130,23 @@ This software uses the following open source packages:
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and Python installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone 
+> git clone 
 
 # Go into the repository
-$ cd Zyte_Project
+> cd Zyte_Project
 
-# Install dependencies
-$ pip3 install -r requirements.txt
+# Install dependencies after installing python properly
+> pip3 install -r requirements.txt
 
+# If you want to run the robot on CMD (instead of IDE Terminal)
+> SET PYTHONPATH=%PYTHONPATH%;<directory of this project>
 
+# Change directory for WEB_Tests or API_Tests
+> cd <directory of this project>/Tests/WEB_Tests
+
+# Run the robot
+> robot --loglevel TRACE --outputdir <path to save the report> --exclude FAILEDORNoRun  <complete path of the .robot file>
