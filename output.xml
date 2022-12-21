@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.13 on win32)" generated="20221221 18:39:05.762" rpa="false" schemaversion="2">
+<suite id="s1" name="WEBGUI" source="f:\GitHub\Plentific-Challenge\Tests\WEB_Tests\WEBGUI.robot">
+<test id="s1-t1" name="Verify that there are 2 cards on the board, Verify that there is a card with a comment And Set the card as DONE">
+<kw name="WEB Login">
+<msg timestamp="20221221 18:39:11.958" level="FAIL">No keyword with name 'WEB Login' found.</msg>
+<status status="FAIL" starttime="20221221 18:39:11.958" endtime="20221221 18:39:11.960"/>
+</kw>
+<kw name="WEB Choose Board">
+<arg>Main Board</arg>
+<status status="NOT RUN" starttime="20221221 18:39:11.967" endtime="20221221 18:39:11.967"/>
+</kw>
+<kw name="WEB Verify Cards">
+<arg>TopListView</arg>
+<arg>qtd=1</arg>
+<status status="NOT RUN" starttime="20221221 18:39:11.972" endtime="20221221 18:39:11.972"/>
+</kw>
+<kw name="WEB Add Card">
+<arg>Plentific</arg>
+<status status="NOT RUN" starttime="20221221 18:39:11.976" endtime="20221221 18:39:11.976"/>
+</kw>
+<kw name="WEB Verify Cards">
+<arg>TopListView</arg>
+<arg>qtd=2</arg>
+<status status="NOT RUN" starttime="20221221 18:39:11.983" endtime="20221221 18:39:11.984"/>
+</kw>
+<kw name="WEB Add Comment">
+<arg>Plentific</arg>
+<arg>Worked!</arg>
+<status status="NOT RUN" starttime="20221221 18:39:11.989" endtime="20221221 18:39:11.990"/>
+</kw>
+<kw name="WEB Verify Comment">
+<status status="NOT RUN" starttime="20221221 18:39:11.995" endtime="20221221 18:39:11.996"/>
+</kw>
+<kw name="WEB Set Start Due Date">
+<arg>Casa</arg>
+<arg>11/19/2022</arg>
+<arg>11/19/2022</arg>
+<arg>10:00 PM</arg>
+<status status="NOT RUN" starttime="20221221 18:39:11.999" endtime="20221221 18:39:11.999"/>
+</kw>
+<kw name="WEB Mark As Done">
+<arg>Casa</arg>
+<status status="NOT RUN" starttime="20221221 18:39:12.007" endtime="20221221 18:39:12.008"/>
+</kw>
+<status status="FAIL" starttime="20221221 18:39:11.951" endtime="20221221 18:39:12.015">No keyword with name 'WEB Login' found.</status>
+</test>
+<status status="FAIL" starttime="20221221 18:39:05.774" endtime="20221221 18:39:12.021"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="WEBGUI">WEBGUI</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221221 18:39:11.919" level="ERROR">Error in file 'f:\GitHub\Plentific-Challenge\Tests\WEB_Tests\WEBGUI.robot' on line 3: Initializing library 'Web_Core' with arguments [ Chrome | default | True ] failed: SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 90
+Current browser version is 108.0.5359.125 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+
+Traceback (most recent call last):
+  File "f:\GitHub\Plentific-Challenge\Web_Adapter\Web_Core.py", line 20, in __init__
+    if before : self._open_page(browser)
+  File "f:\GitHub\Plentific-Challenge\Web_Adapter\Web_Core.py", line 50, in _open_page
+    self.driver = webdriver.Chrome(executable_path=cwd+r'\\Drivers\\chromedriver.exe',options=options)
+  File "c:\ProgramData\robocorp\ht\13a6425_b1f3c24_b352a094\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 76, in __init__
+    RemoteWebDriver.__init__(
+  File "c:\ProgramData\robocorp\ht\13a6425_b1f3c24_b352a094\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "c:\ProgramData\robocorp\ht\13a6425_b1f3c24_b352a094\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "c:\ProgramData\robocorp\ht\13a6425_b1f3c24_b352a094\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "c:\ProgramData\robocorp\ht\13a6425_b1f3c24_b352a094\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)</msg>
+</errors>
+</robot>

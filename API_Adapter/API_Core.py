@@ -8,8 +8,9 @@ from Lib_actions import actions
 from Lib_cards import cards
 from Lib_lists import lists
 
-dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))+'/Settings'
-sys.path.append(dir_path)
+cwd = os.getcwd()+'/Settings'
+
+sys.path.append(cwd)
 from config import Config
 #home = expanduser('~')
 dir_path = os.path.dirname(os.path.realpath(__file__))

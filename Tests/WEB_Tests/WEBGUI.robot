@@ -1,6 +1,6 @@
 *** Settings ***
 #Library    CustomSeleniumLibrary.py
-Library    ..${/}..${/}Web_Adapter/Web_Core.py   Firefox   default
+Library    ..${/}..${/}Web_Adapter/Web_Core.py   Chrome   default    True
 #Test Setup   Web Open Page
 
 *** Test Cases ***
