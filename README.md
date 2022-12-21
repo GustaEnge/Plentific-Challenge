@@ -2,7 +2,7 @@
 <h1 align="center">
 
   <br>  
-  QA Automation for REST API
+  QA Automation for REST API and WEB UI
   <br>
 </h1>
 
