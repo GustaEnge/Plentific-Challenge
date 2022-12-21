@@ -47,7 +47,7 @@ class Web_Core(methods):
             options = webdriver.ChromeOptions()
             if not headless:
                 options.add_argument("--window-position=2000,0")
-                self.driver = webdriver.Chrome(executable_path=cwd+r'\\Drivers\\chromedriver.exe',options=options)
+                self.driver = webdriver.Chrome(options=options)
             else:
                 options.headless = True
                 driver = webdriver.Chrome(executable_path=cwd+r'\\Drivers\\chromedriver.exe',options=options)
@@ -102,7 +102,7 @@ if __name__ == "__main__":
     obj = Web_Core('Chrome','default')
 
     obj.Web_Open_Page()
-    obj.WEB_Get_Credentials('teste01')
+    #obj.WEB_Get_Credentials('teste01')
     obj.WEB_Login()
     obj.WEB_Choose_Board('Gustavinho')
     obj.WEB_Verify_Cards('To Do','Algo')

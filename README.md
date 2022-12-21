@@ -103,6 +103,8 @@ This software uses the following open source packages:
 
 [Python](https://docs.python.org/3/)
 
+[ChromeDriver](https://chromedriver.chromium.org/)
+
 
 ## Observations
 
@@ -130,7 +132,7 @@ This software uses the following open source packages:
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and Python installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com), Python and ChromeDriver installed on your computer and set in the environment variables like ChromeDriver or at least put the exe inside C directory . From your command line:
 
 ```bash
 # Clone this repository
