@@ -55,38 +55,77 @@ class Web_Core(methods):
         self.driver.get(self.url)
         self.driver.maximize_window()  
     
-    def _close_page(self,):
+    def _close_page(self):
+        '''
+            Close the web object, WEBGUI browser
+        '''         
         self.driver.quit()
     def __exit__(self):
         self._close_page(self)
 
     def WEB_Get_Credentials(self,name,):
+        '''
+            Retrieve the credentials for further interactions with the Trello, namely API Key and Token
+                Parameters:
+                        name (string) : the name of the Trello Workspace
+                Returns:
+                    (tuple) : API Key and Token
+        '''         
         #if driver:self.driver = driver
         return self.get_credentials(name)
 
     def Web_Open_Page(self):
+        '''
+            Open a web page object, depending on the browser put in Web_Core object's argument
+        '''            
         self._open_page(self.browser)
         
     def Web_Close_Page(self,):
         self._close_page(self) 
 
     def WEB_Login(self,email=None,password=None,):
+        '''
+            Login in Trello page
+                Parameters:
+                        name (string) : login name, normally email for your account
+                        password (string): password to login you account
+        '''          
         email,password = email,password
         if self.email and self.password: 
             email,password = self.email,self.password    
         self.login(email,password)
 
     def WEB_Choose_Board(self,name,):
+        '''
+            Choose a board inside your account page
+                Parameters:
+                        name (string) : board name you want to go in
+        '''     
         self.chooseBoard(name)
       
 
     def WEB_Verify_Cards(self,listName,cardName,):
+        '''
+            Verify if there is a card with the name passed through argument depending on the list's name
+                Parameters:
+                        listName (string) : list's name you want to verify the card
+                        cardName (string) : card's name you want to verify                       
+        '''          
         self.verifyCards(listName,cardName)
 
     def WEB_Verify_Comment(self,):
+        '''
+            Verify if there is any comment on the list's name. Regarding the list's name set in the object attribute during verifyCards execution                   
+        '''             
         self.verifyComments()
 
     def WEB_Add_Comment(self,cardName,text,):
+        '''
+            Add a comment in a card
+                Parameters:
+                        text (string) : the content you want to write as a comment
+                        cardName (string) : card's name you want to add the comment                       
+        '''          
         self.addComment(cardName,text) 
 
     def WEB_Set_Start_Due_Date(self,cardName,startDate,dueDate,timeDueDate,):
